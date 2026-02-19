@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Premium Habit Tracker</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="background"></div>
+
+<div class="app">
+
+    <!-- Sidebar -->
+    <aside class="sidebar glass">
+        <div class="profile">
+            <div class="avatar">🌿</div>
+            <h3>My Habits</h3>
+        </div>
+
+        <div class="add-habit">
+            <input type="text" id="habitInput" placeholder="Add habit...">
+            <button id="addHabit">+</button>
+        </div>
+
+        <ul id="habitList"></ul>
+
+        <div class="theme-toggle">
+            <label>
+                🌙
+                <input type="checkbox" id="themeToggle">
+                ☀️
+            </label>
+        </div>
+    </aside>
+
+    <!-- Main -->
+    <main class="main">
+
+        <section class="stats-grid">
+            <div class="stat-card glass">
+                🔥 Current Streak
+                <h2 id="currentStreak">0</h2>
+            </div>
+            <div class="stat-card glass">
+                🏆 Longest Streak
+                <h2 id="longestStreak">0</h2>
+            </div>
+            <div class="stat-card glass">
+                📅 Total Days
+                <h2 id="totalDays">0</h2>
+            </div>
+            <div class="stat-card glass">
+                📊 Completion
+                <div class="circle">
+                    <span id="completionPercent">0%</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="heatmap-container glass">
+            <h3>Year Overview</h3>
+            <div id="heatmap" class="heatmap"></div>
+        </section>
+
+        <section class="quote glass">
+            <p id="quoteText">Stay consistent. Small steps matter.</p>
+        </section>
+
+    </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
